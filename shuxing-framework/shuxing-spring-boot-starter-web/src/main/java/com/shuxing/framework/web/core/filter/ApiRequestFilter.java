@@ -1,7 +1,7 @@
 package com.shuxing.framework.web.core.filter;
 
 import cn.hutool.core.util.StrUtil;
-import cn.iocoder.yudao.framework.web.config.WebProperties;
+import com.shuxing.framework.web.config.WebProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.filter.OncePerRequestFilter;
 

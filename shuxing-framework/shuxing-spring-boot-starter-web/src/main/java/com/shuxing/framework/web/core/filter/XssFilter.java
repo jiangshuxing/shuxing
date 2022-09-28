@@ -1,6 +1,6 @@
 package com.shuxing.framework.web.core.filter;
 
-import cn.iocoder.yudao.framework.web.config.XssProperties;
+import com.shuxing.framework.web.config.XssProperties;
 import lombok.AllArgsConstructor;
 import org.springframework.util.PathMatcher;
 import org.springframework.web.filter.OncePerRequestFilter;

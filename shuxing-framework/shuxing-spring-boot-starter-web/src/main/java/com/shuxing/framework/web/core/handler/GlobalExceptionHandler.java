@@ -3,18 +3,18 @@ package com.shuxing.framework.web.core.handler;
 import cn.hutool.core.exceptions.ExceptionUtil;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.extra.servlet.ServletUtil;
-import cn.iocoder.yudao.framework.apilog.core.service.ApiErrorLog;
-import cn.iocoder.yudao.framework.apilog.core.service.ApiErrorLogFrameworkService;
-import cn.iocoder.yudao.framework.common.exception.ServiceException;
-import cn.iocoder.yudao.framework.common.pojo.CommonResult;
-import cn.iocoder.yudao.framework.common.util.json.JsonUtils;
-import cn.iocoder.yudao.framework.common.util.monitor.TracerUtils;
-import cn.iocoder.yudao.framework.common.util.servlet.ServletUtils;
-import cn.iocoder.yudao.framework.web.core.util.WebFrameworkUtils;
+import com.shuxing.framework.apilog.core.service.ApiErrorLog;
+import com.shuxing.framework.apilog.core.service.ApiErrorLogFrameworkService;
+import com.shuxing.framework.exception.ServiceException;
+import com.shuxing.framework.pojo.CommonResult;
+import com.shuxing.framework.util.json.JsonUtils;
+import com.shuxing.framework.util.monitor.TracerUtils;
+import com.shuxing.framework.util.servlet.ServletUtils;
+import com.shuxing.framework.web.core.util.WebFrameworkUtils;
 import io.github.resilience4j.ratelimiter.RequestNotPermitted;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.exception.ExceptionUtils;
+import org.apache.tomcat.util.ExceptionUtils;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.util.Assert;
 import org.springframework.validation.BindException;
@@ -34,7 +34,6 @@ import javax.validation.ValidationException;
 import java.util.Date;
 import java.util.Map;
 
-import static cn.iocoder.yudao.framework.common.exception.enums.GlobalErrorCodeConstants.*;
 
 /**
  * 全局异常处理器，将 Exception 翻译成 CommonResult + 对应的异常编号
